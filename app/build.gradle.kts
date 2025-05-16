@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp) // подключаем KSP плагин
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -46,7 +46,7 @@ dependencies {
 
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    ksp(libs.room.compiler)  // заменили kapt на ksp
+    ksp(libs.room.compiler)
 
     implementation(libs.paging.runtime)
     implementation(libs.splashscreen)
