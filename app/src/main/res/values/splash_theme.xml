@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Test_task.SplashScreen" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo_cat</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.Test_task</item>
+
+    </style>
+</resources>
