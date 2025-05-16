@@ -11,16 +11,41 @@ activity = "1.10.0"
 constraintlayout = "2.2.0"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+# Core AndroidX
+androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.13.1" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.6.1" }
+androidx-activity = { module = "androidx.activity:activity-ktx", version = "1.8.2" }
+
+# Material Design
+material = { module = "com.google.android.material:material", version = "1.11.0" }
+
+# ConstraintLayout & MotionLayout
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
+
+# RecyclerView
+recyclerview = { module = "androidx.recyclerview:recyclerview", version = "1.3.2" }
+
+# Retrofit
+retrofit = { module = "com.squareup.retrofit2:retrofit", version = "2.9.0" }
+retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version = "2.9.0" }
+
+# Room (разбито на отдельные)
+room-runtime = { module = "androidx.room:room-runtime", version = "2.6.1" }
+room-ktx = { module = "androidx.room:room-ktx", version = "2.6.1" }
+room-compiler = { module = "androidx.room:room-compiler", version = "2.6.1" }
+
+# Paging
+paging-runtime = { module = "androidx.paging:paging-runtime", version = "3.2.1" }
+
+# SplashScreen
+splashscreen = { module = "androidx.core:core-splashscreen", version = "1.0.1" }
+
+# Тестирование
+junit = { module = "junit:junit", version = "4.13.2" }
+androidx-junit = { module = "androidx.test.ext:junit", version = "1.1.5" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version = "3.5.1" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+android-application = { id = "com.android.application", version = "8.8.0" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.22" }
+ksp = { id = "com.google.devtools.ksp", version = "1.9.22-1.0.17" }  # Добавляем KSP, убираем kapt
