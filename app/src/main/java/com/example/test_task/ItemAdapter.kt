@@ -21,7 +21,7 @@ class ItemAdapter(private val items: List<Result>) : RecyclerView.Adapter<ItemAd
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = items[position]
-        holder.titleTextView.text = item.name
+        holder.titleTextView.text = item.species
         holder.bodyTextView.text = item.species
     }
 
